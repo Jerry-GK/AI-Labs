@@ -206,7 +206,6 @@ class KMeans():
         n_clusters=8,
         n_init=10,
         max_iter=400,
-        tol=2e-4
     ):
 
         self.n_clusters = n_clusters
@@ -239,7 +238,7 @@ class KMeans():
             for i in range(self.n_clusters):
                 init_centers[i] = arr[init_indexes[i]]
 
-            centers, labels, shift = self.kmeans(x, init_centers, self.tol)
+            centers, labels, shift = self.kmeans(x, init_centers, 2e-4)
             if best_shift is None or shift < best_shift:
                 best_centers = centers
                 best_labels = labels
