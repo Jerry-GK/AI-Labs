@@ -4,3 +4,7 @@ Reversi
 SpamMessage
 
 KMeans
+
+Mask
+
+Robot
